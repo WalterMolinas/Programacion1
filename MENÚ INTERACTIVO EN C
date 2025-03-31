@@ -1,0 +1,41 @@
+#include <stdio.h>
+
+int main() {
+	int a,b,c,d,suma,resta,numero,i;
+	printf("Este programa pedira ingresar una de las opciones para el menu interactivo \n");
+	i=1;
+	do {
+		printf("Ingrese una opcion 1-4 \n");
+		printf("1-Suma\n2-Resta\n3-Multiplicacion\n4-Salir\n");
+		scanf("%d", &a);
+		switch (a){
+		case 1:
+			printf("Ingrese los 2 numeros a sumar\n");
+			scanf("%d", &b);
+			scanf("%d", &c);
+			suma=b+c;
+			printf("La suma sera de: %d\n",suma);
+			break;
+		case 2:
+			printf("Ingrese los 2 numeros a restar\n \n");
+			scanf("%d", &b);
+			scanf("%d", &c);
+			resta=b-c;
+			printf("La resta sera de: %d \n \n",resta);
+			break;
+		case 3:
+			printf("Ingrese hasta que numero desea multiplicar\n \n");
+			scanf("%d", &numero);
+			while(i<=numero){
+				printf(" %d x %d = %d\n",numero,i,numero*i);
+				i++;
+			}
+			break;
+		case 4:
+			printf("Gracias por utilizar nuestro menú Adios \n \n");
+			break;
+		default: ("ERROR");
+		}
+	} while(a!=4);
+	return 0;
+}
